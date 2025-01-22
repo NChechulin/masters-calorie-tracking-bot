@@ -12,6 +12,7 @@ python = "^3.10"
 aiogram = "^3.17.0"
 python-dotenv = "^1.0.1"
 requests = "^2.32.3"
+logger = "^1.4"
 
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "^23.3.0"}
@@ -24,6 +25,7 @@ flake8-absolute-import = "^1.0.0.1"
 flake8-new-union-types = "^0.4.1"
 flake8-annotations-complexity = "^0.0.7"
 poetry-plugin-export = "^1.9.0"
+isort = "^5.13.2"
 
 [build-system]
 requires = ["poetry-core"]
