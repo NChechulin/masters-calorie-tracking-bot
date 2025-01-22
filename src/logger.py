@@ -11,5 +11,5 @@ class BotLogger(BaseMiddleware):
         event: Message,
         data: dict[str, Any],
     ) -> Any:
-        print(f"Received a message: {event.text}")
+        print(f"Received a message:\t{event.text}")
         return await handler(event, data)

@@ -11,6 +11,7 @@ class Config:
     BOT_TOKEN: str
     WEATHER_TOKEN: str
     WEATHER_API_BASE: str
+    FOOD_API_BASE: str
 
     def __init__(self, dotenv_path: Path = Path(".env")) -> None:
         load_dotenv(dotenv_path)
@@ -29,4 +30,9 @@ class Config:
                 raise KeyError("Config does not contain 'WEATHER_API_BASE' variable")
             case url:
                 self.WEATHER_API_BASE = url
+        match getenv("FOOD_API_BASE"):
+            case None:
+                raise KeyError("Config does not contain 'FOOD_API_BASE' variable")
+            case url:
+                self.FOOD_API_BASE = url
         logging.info(f"Read config: {self}")

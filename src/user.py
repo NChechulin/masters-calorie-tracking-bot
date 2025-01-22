@@ -68,3 +68,15 @@ class UserModel:
         self.calorie_goal = int(10 * self.weight + 6.25 * self.height - 5 * self.age)
         if self.activity > 50:
             self.calorie_goal += 300
+
+    def progress_msg(self) -> str:
+        water_left = max(0, self.water_goal - self.logged_water)
+        balance = int(self.logged_calories - self.burnt_calories)
+        cl = self.logged_calories
+        cg = self.calorie_goal
+        lines = [
+            "Твой прогресс:",
+            f"Вода: {self.logged_water} / {self.water_goal} мл (еще {water_left} мл)",
+            f"Калории: {cl} / {cg} ккал (баланс {balance} ккал)",
+        ]
+        return "\n".join(lines)
