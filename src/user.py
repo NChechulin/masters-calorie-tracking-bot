@@ -19,6 +19,11 @@ class UserModel:
     city: str
     height: float
     weight: float
+    water_goal: float = 0
+    calorie_goal: float = 0
+    logged_water: float = 0
+    logged_calories: float = 0
+    burnt_calories: float = 0
 
     def __post_init__(self) -> None:
         if self.activity < 0 or self.activity >= 24 * 60:
