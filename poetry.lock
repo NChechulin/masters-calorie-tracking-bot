@@ -1247,17 +1247,6 @@ test = ["pyfakefs", "pytest (>=6,!=8.1.*)"]
 type = ["pygobject-stubs", "pytest-mypy", "shtab", "types-pywin32"]
 
 [[package]]
-name = "logger"
-version = "1.4"
-description = "Python logging helper"
-optional = false
-python-versions = "*"
-groups = ["main"]
-files = [
-    {file = "logger-1.4.tar.gz", hash = "sha256:4ecac57133c6376fa215f0fe6b4dc4d60e4d1ad8be005cab4e8a702df682f8b3"},
-]
-
-[[package]]
 name = "magic-filter"
 version = "1.0.12"
 description = ""
@@ -2819,4 +2808,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "fcdd0fe49f80f147964746728ee111e0fe1b56db2403aafdcb1210ed1ee429a8"
+content-hash = "c3533d86f08f9e334032e35c2fc8a57a5a011098209b067b323953beadea95c7"

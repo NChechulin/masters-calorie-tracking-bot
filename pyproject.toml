@@ -12,7 +12,6 @@ python = "^3.10"
 aiogram = "^3.17.0"
 python-dotenv = "^1.0.1"
 requests = "^2.32.3"
-logger = "^1.4"
 
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "^23.3.0"}
