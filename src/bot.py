@@ -4,6 +4,7 @@ import logging
 from aiogram import Bot, Dispatcher
 
 from config import Config
+from handlers import setup
 from logger import BotLogger
 
 config = Config()
@@ -15,8 +16,10 @@ dp.message.middleware(BotLogger())
 
 
 async def main() -> None:
-    print("Bot started.")
-    logging.info("Bot started.")
+    print("Bot started")
+    logging.info("Bot started")
+    setup(dp)
+    logging.info("Set up handlers")
     await dp.start_polling(bot)
 
 
