@@ -38,7 +38,7 @@ repos:
             language: python
             files: ".*.py$"
             pass_filenames: true
-         - id: flake8
+          - id: flake8
             name: flake8
             description: Run flake8 linter
             entry: poetry run flake8
