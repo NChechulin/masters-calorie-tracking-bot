@@ -4,7 +4,7 @@ from aiogram.fsm.state import State, StatesGroup
 
 
 @dataclass
-class User(StatesGroup):
+class UserModel(StatesGroup):
     activity: State
     age: State
     city: State
