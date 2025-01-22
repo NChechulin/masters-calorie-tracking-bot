@@ -92,13 +92,13 @@ async def read_city(message: Message, state: FSMContext) -> None:
         user = UserModel(**user_data)
         user_database[user_id] = user
         logging.info(f"Inserted new user: {user_database[user_id]}")
+
+        await state.clear()
+        await message.reply(
+            f"Добавил тебя в базу! Вот твои цели на день:\n"
+            f"Вода: {user.water_goal} мл\n"
+            f"Калории: {user.calorie_goal} ккал."
+        )
     except Exception as e:
         message.reply(f"Проиозшла ошибка: {e}")
-        logging.error("Got an error while creating new user: {e}")
-
-    await state.clear()
-    await message.reply(
-        f"Добавил тебя в базу! Вот твои цели на день:\n"
-        f"Вода: {user.water_goal} мл\n"
-        f"Калории: {user.calorie_goal} ккал."
-    )
+        logging.error(f"Got an error while creating new user: {e}")

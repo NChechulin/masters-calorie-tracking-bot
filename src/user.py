@@ -8,13 +8,12 @@ from config import Config
 config = Config()
 
 
-@dataclass
 class UserState(StatesGroup):
-    activity: State
-    age: State
-    city: State
-    height: State
-    weight: State
+    activity: State = State()
+    age: State = State()
+    city: State = State()
+    height: State = State()
+    weight: State = State()
 
 
 @dataclass
@@ -46,7 +45,7 @@ class UserModel:
             return temp
         else:
             raise ValueError(
-                "Incorrect city might have been entered. API response: {response}"
+                f"Incorrect city might have been entered. API response: {response}"
             )
 
     def __post_init__(self) -> None:
