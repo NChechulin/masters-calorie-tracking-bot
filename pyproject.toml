@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "python-template"
+name = "masters-calorie-tracking-bot"
 version = "0.1.0"
-description = ""
+description = "A python hw"
 authors = ["Nikolay Chechulin <nchechulin@protonmail.com>"]
 license = "MIT"
 readme = "README.md"
